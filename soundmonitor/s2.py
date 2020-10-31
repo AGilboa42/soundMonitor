@@ -1,17 +1,17 @@
 #!/usr/bin/python
  
-print "also hello there!"
+print("also hello there!")
 import time
  
 import numpy as np
 import seaborn as sns
 import pandas as pd
-print "importing matplotlib"
+print("importing matplotlib")
 import matplotlib
-print "finished importing matplotlib"
-print "importing pylab"
+print("finished importing matplotlib")
+print("importing pylab")
 import pylab
-print "finished importing pylab"
+print("finished importing pylab")
 from os import listdir as listdir
 from datetime import datetime
 from datetime import timedelta
@@ -21,7 +21,7 @@ import os
 import ftplib
  
 def myFormatter(x,pos):
-return pd.to_datetime(x)
+    return pd.to_datetime(x)
  
 current_time = datetime.now()
  
@@ -37,7 +37,7 @@ list_of_filenames.append(glob.glob('/home/pi/Documents/sound_level_records/' + t
 list_of_filenames.append(glob.glob('/home/pi/Documents/sound_level_records/' + time.strftime("%Y_%m_%d",(current_time-timedelta(days=1)).timetuple()) + '*'))
 list_of_filenames = [item for sublist in list_of_filenames for item in sublist]
  
-print len(list_of_filenames)
+print(len(list_of_filenames))
  
 #import data from each minute
 for filename in list_of_filenames:
